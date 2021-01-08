@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
   const token = authorization.replace("Bearer ", "");
 
   //Varify using the jwt library:
-  jwt.verify(token, "MY_SECRET_KEY", async (err, payload) => {
+  jwt.verify(token, "YOUR_SECRET_KEY", async (err, payload) => {
     //payload is going to be any information we put in the json web token (in our case just a userId)
     if (err) {
       // if there is an error
