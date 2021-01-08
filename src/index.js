@@ -21,7 +21,7 @@ app.use(trackRoutes);
 
 //coonect to the mongoDB server:
 const mongoUri =
-  "mongodb+srv://Admin:02020202a@clustertrack.qasj8.mongodb.net/<dbname>?retryWrites=true&w=majority";
+  "mongodb+srv://Admin:YOUR_PASSWORD@clustertrack.qasj8.mongodb.net/<dbname>?retryWrites=true&w=majority";
 mongoose.connect(mongoUri, {
   useNewUrlParser: true, // these two option are to prevent error messages appear in our terminal
   useCreateIndex: true,
