@@ -23,7 +23,7 @@ router.post("/signup", async (req, res) => {
     await user.save(); // in order to initiate the save operation in the Database
     console.log(req.body); // print whatever is being sent by the user to the terminal
     // creating a token:
-    const token = jwt.sign({ userId: user._id }, "MY_SECRET_KEY");
+    const token = jwt.sign({ userId: user._id }, "YOUR_SECRET_KEY");
     // presenting it in the Postman app:
     res.send({ token: token });
   } catch (err) {
@@ -49,7 +49,7 @@ router.post("/signin", async (req, res) => {
   try {
     await user.comparePassword(password); // This is a fucntion I created in the User.js file. it will return an err if the passwords to not match.
     // Now, if the password comparison was successful, we want to make sure we generate a Json Web Token and send it back so the user will be able to autonticate thenselves on future requests:
-    const token = jwt.sign({ userId: user._id }, "MY_SECRET_KEY");
+    const token = jwt.sign({ userId: user._id }, "YOUR_SECRET_KEY");
     // Sending the TOKEN:
     res.send({ token: token });
   } catch (err) {
