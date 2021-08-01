@@ -1,6 +1,6 @@
 # TrackerAppServer
 
-*Make suee to update your MongoDB userName and Password
+*Make sure to update your MongoDB userName and Password
 
 Chnage YOUR_PASSWORD to your MongoDb password. and MY_SECRET_PASSWORD to your secret Json Web Token password
 
